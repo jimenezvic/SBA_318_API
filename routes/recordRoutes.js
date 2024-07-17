@@ -9,10 +9,12 @@ router.get('/', (req, res)=>{
 })
 
 router.get('/:student_id', (req, res, next)=>{
-    const record = records.find((record)=> record.student_id === +req.params.student_id);
-    if(record) res.json(record);
-    else next();
-    
+    const record = records.find((record)=>{
+        if(record.id == req.params.id){
+            return true;
+        }
+    })
+    if(record) res.json(record)
 })
 
 module.exports = router;

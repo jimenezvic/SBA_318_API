@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 // app.use(bodyParser.json({extended:true}))
 app.use(express.json())
 
-app.use('/banana', patientRoutes)
+app.use('/patients', patientRoutes)
 app.use('/records', recordRoutes)
 
 //Routes
