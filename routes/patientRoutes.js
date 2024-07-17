@@ -37,16 +37,6 @@ router.get('/', (req, res)=>{
 })
 
 
-//SHOW - GET - show one patient
-// router.get('/:student_id', (req, res, next)=>{
-//     console.log('GET REQUEST BY STUDENT ID' , req.params)
-//     const patient = patients.find((patient)=>
-//     patient.student_id == req.params.student_id);
-//     if(patient) {
-//         console.log(patient)
-//         res.json(patient) }
-//     else next();
-// })
 
 router.get('/:student_id', (req, res,next)=>{
     console.log("GET REQUEST BY STUDENT ID",req.params)

@@ -24,11 +24,11 @@ app.get('/', (req,res)=>{
 
 
 //MIDDLEWARE FUNCTION TO HANDLE 404 ERRORS
-// app.use((req, res)=>{
-//     res.status(404).json({
-//         error: '404 not found'
-//     })
-// })
+app.use((req, res)=>{
+    res.status(404).json({
+        error: '404 not found'
+    })
+})
 //MIDDLEWARE HANDLE ERRORS
 app.use((err, req, res, next)=>{
     console.log(err.stack);
