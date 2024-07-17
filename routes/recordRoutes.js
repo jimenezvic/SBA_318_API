@@ -8,7 +8,7 @@ router.get('/', (req, res)=>{
     res.json(records)
 })
 
-router.get('/:student_id', (req, res, next)=>{
+router.get('/:id', (req, res, next)=>{
     const record = records.find((record)=>{
         if(record.id == req.params.id){
             return true;
